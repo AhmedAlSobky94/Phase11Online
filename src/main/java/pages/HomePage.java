@@ -23,6 +23,7 @@ public class HomePage {
     //8-nfs el fekra b2a l ba2y el pages
         private final By forgetPasswordPage = By.xpath("//a[@href=\"/forgot_password\"]");
         private final By statusCodePage = By.xpath("//a [@href=\"/status_codes\"]");
+        private final By dynamicLoadingLink = By.xpath("//a [@href=\"/dynamic_loading\"]");
 
 
 
@@ -44,6 +45,10 @@ public class HomePage {
     public StatusCodePage clickOnStatusCodeLink (){
             driver.findElement(statusCodePage).click();
             return new StatusCodePage(driver);
+    }
+    public DynamicLoadingPadge clickOnDynamicLoadingLink (){
+            driver.findElement(dynamicLoadingLink).click();
+            return new DynamicLoadingPadge(driver);
     }
 
 
